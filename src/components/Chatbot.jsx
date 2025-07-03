@@ -59,16 +59,20 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen p-4">
-      <div className="flex flex-col w-full max-w-md mx-auto border border-gray-200 rounded-lg overflow-hidden height-full shadow-lg">
-        <div className="flex-1 p-8 overflow-y-auto bg-gray-50">
+    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-50">
+      <div className="w-full max-w-md mb-4 text-center">
+        <h1 className="text-2xl font-bold text-gray-800">AI Chatbot</h1>
+      </div>
+      
+      <div className="flex flex-col w-full max-w-md border border-gray-200 rounded-lg overflow-hidden shadow-lg bg-white" style={{ height: "70vh" }}>
+        <div className="flex-1 p-4 overflow-y-auto">
           {messages.map((msg, i) => (
             <div
               key={i}
               className={`mb-3 rounded-lg p-3 ${
                 msg.sender === "user"
                   ? "ml-auto bg-blue-600 text-white rounded-br-none"
-                  : "mr-auto bg-white border border-gray-200 rounded-bl-none"
+                  : "mr-auto bg-gray-100 rounded-bl-none"
               }`}
               style={{
                 maxWidth: "80%",
@@ -88,7 +92,7 @@ const Chatbot = () => {
 
           {loading && (
             <div
-              className="mr-auto bg-white border border-gray-200 rounded-lg p-3"
+              className="mr-auto bg-gray-100 rounded-lg p-3"
               style={{
                 maxWidth: "80%",
                 width: "fit-content",
