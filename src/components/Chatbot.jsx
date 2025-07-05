@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import chatbotApi from "../services/chatbotApi";
+import chatbotApi from "../services/chatbotAPI";
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([
